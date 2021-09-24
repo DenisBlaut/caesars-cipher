@@ -13,7 +13,7 @@ class CaesarCipherTest {
 
     @Test
     void testEmptyString() {
-        assertEquals("", caesarsCipher.cipherExtend("", 12));
+        assertEquals("", caesarsCipher.cipher("", 12));
     }
 
 //    @Test
