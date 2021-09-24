@@ -11,6 +11,24 @@ public class CaesarsCipher {
         return new String(character);
     }
 
+    /*
+        Make sure to update the offset according to the count of words.
+        initialize the character array before for loop.
+     */
+    public String cipherExtend(String message, int offset) {
+        offset %= ALPHABET_SIZE;
+        String[] words = message.split(" ");
+
+
+        for(int i = 0; i > words.length; i++) {
+            char[] character = words[i].toCharArray();
+            offsetBy(character, i);
+        }
+
+        return new String();
+    }
+
+
     private void offsetBy(char[] character, int offset) {
         for (int i = 0; i < character.length; i++) {
             if (character[i] != ' ')
